@@ -1,0 +1,47 @@
+{
+	"info": {
+		"_postman_id": "8eb45507-2c05-4dff-91e0-061170cfb9dc",
+		"name": "Assertion response body",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "https://data.cityofnewyork.us/data.json",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"\r",
+							"// question 1\r",
+							"console.log(pm.response.json().dataset[1891].title)\r",
+							"// question2\r",
+							"console.log(pm.response.json()['@context'])\r",
+							"\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://data.cityofnewyork.us/data.json",
+					"protocol": "https",
+					"host": [
+						"data",
+						"cityofnewyork",
+						"us"
+					],
+					"path": [
+						"data.json"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
